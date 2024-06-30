@@ -1,0 +1,67 @@
+.hero-container {
+  background-image: url("../../assets/images/clinic-hero-image.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  background-size: cover;
+  height: 27rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.hero-text {
+  max-width: 80%;
+  text-align: center;
+}
+
+.hero-title {
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 0.8rem;
+}
+
+.hero-sub-title {
+  color: white;
+  font-size: 1.1rem;
+  font-weight: 400;
+  margin-bottom: 0.8rem;
+}
+
+.hero-button {
+  color: white;
+  padding: 1rem;
+  background-color: rgb(60, 151, 255);
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.hero-button:hover {
+  background-color: rgb(1, 90, 255);
+}
+
+@media (max-width: 650px) {
+  .hero-container {
+    height: 23rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-sub-title {
+    font-size: 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+
+  .hero-button {
+    padding: 0.9rem;
+    font-size: 0.9rem;
+  }
+}

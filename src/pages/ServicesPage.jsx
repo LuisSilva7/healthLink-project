@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/shared/Navbar";
 
 const ServicesPage = () => {
-  return <div>ServicesPage</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default ServicesPage;

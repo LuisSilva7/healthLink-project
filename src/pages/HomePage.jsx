@@ -1,12 +1,12 @@
 import React from "react";
 import Navbar from "../components/shared/Navbar";
-import Teste from "../components/homePage/Teste";
+import Hero from "../components/homePage/Hero";
 
 const HomePage = () => {
   return (
     <>
       <Navbar />
-      <Teste />
+      <Hero />
     </>
   );
 };

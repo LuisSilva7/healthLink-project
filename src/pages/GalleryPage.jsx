@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/shared/Navbar";
 
 const Gallery = () => {
-  return <div>Gallery</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default Gallery;
