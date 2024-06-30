@@ -52,6 +52,7 @@
 @media (max-width: 650px) {
   .hero-container {
     height: 23rem;
+    background: linear-gradient(to bottom, #0044cc, #ffffff);
   }
 
   .hero-title {
