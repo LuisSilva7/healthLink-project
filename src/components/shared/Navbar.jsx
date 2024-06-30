@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import React, { useState } from "react";
+import { NavLink, Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
@@ -12,7 +12,7 @@ const Navbar = () => {
 
   return (
     <nav className={styles["navbar-container"]}>
-      <div className={styles["healthLink-container"]}>
+      <Link to="/" className={styles["healthLink-container"]}>
         <div className={styles["helthLink-logo-container"]}>
           <img
             src={healthLinkLogo}
@@ -20,7 +20,7 @@ const Navbar = () => {
           />
         </div>
         <span className={styles["helthLink-title"]}>HealthLink</span>
-      </div>
+      </Link>
       <div className={styles["right-side"]}>
         <div className={styles["navbar-menu-container"]}>
           <div

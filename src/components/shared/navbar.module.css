@@ -17,6 +17,10 @@
   position: relative;
 }
 
+.navbar-profile-container {
+  margin-left: 1.5rem;
+}
+
 .healthLink-container {
   display: none;
 }
@@ -35,6 +39,7 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
+  cursor: pointer;
 }
 
 .profile-icon-container {
@@ -159,6 +164,7 @@
   .healthLink-container {
     display: flex;
     align-items: center;
+    text-decoration: none;
   }
 
   .helthLink-logo-container {

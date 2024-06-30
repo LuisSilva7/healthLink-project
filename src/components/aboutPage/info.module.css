@@ -1,0 +1,68 @@
+.info-container {
+  margin-top: 4rem;
+  background-image: url("../../assets/images/about-info-image.jpg");
+  background-attachment: scroll;
+  background-size: cover;
+  height: 40rem;
+}
+
+.text-container {
+  width: 45%;
+  padding-left: 15%;
+  padding-top: 8%;
+}
+
+.title {
+  font-size: 2.8rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+}
+
+.text {
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  margin-bottom: 1rem;
+  color: rgb(76, 76, 76);
+}
+
+@media (max-width: 1000px) {
+  .info-container {
+    height: 30rem;
+  }
+
+  .text-container {
+    padding-left: 10%;
+    padding-top: 5%;
+  }
+
+  .title {
+    font-size: 2.3rem;
+  }
+
+  .text {
+    line-height: 1.3rem;
+  }
+}
+
+@media (max-width: 700px) {
+  .info-container {
+    height: 22rem;
+  }
+
+  .text-container {
+    padding-left: 3%;
+    padding-top: 3%;
+    width: 60%;
+  }
+
+  .title {
+    font-size: 1.4rem;
+    margin-bottom: 1rem;
+  }
+
+  .text {
+    font-size: 0.8rem;
+    line-height: 1.2rem;
+    margin-bottom: 0.5rem;
+  }
+}
