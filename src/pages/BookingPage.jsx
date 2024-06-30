@@ -1,7 +1,12 @@
 import React from "react";
+import Navbar from "../components/shared/Navbar";
 
 const BookingPage = () => {
-  return <div>BookingPage</div>;
+  return (
+    <>
+      <Navbar />
+    </>
+  );
 };
 
 export default BookingPage;

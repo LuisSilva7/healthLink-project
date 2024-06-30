@@ -1,0 +1,110 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  border: 1px solid black;
+}
+
+.navbar-menu-container {
+  position: relative;
+}
+
+.menu-icon-container,
+.profile-icon-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+}
+
+.menu-icon-container-active {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 50%;
+  background-color: rgb(229, 231, 235);
+}
+
+.menu-icon {
+  font-size: 2.3rem;
+}
+
+.profile-icon {
+  font-size: 3rem;
+}
+
+.navbar-menu,
+.navbar-profile {
+  position: absolute;
+  top: 4rem;
+  left: 0.5rem;
+  padding: 0.2rem 1rem;
+  background-color: rgb(241, 241, 241);
+  width: 12rem;
+  border-radius: 10px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-menu-active {
+  position: absolute;
+  top: 4rem;
+  left: 0.5rem;
+  padding: 0.2rem 1rem;
+  background-color: rgb(241, 241, 241);
+  width: 12rem;
+  border-radius: 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-profile-active {
+  position: absolute;
+  top: 4.5rem;
+  right: 0.5rem;
+  padding: 0.2rem 1rem;
+  background-color: rgb(241, 241, 241);
+  width: 10rem;
+  border-radius: 10px;
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 0.3s ease;
+}
+
+.navbar-menu-items,
+.navbar-profile-items {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+}
+
+.navbar-menu-item,
+.navbar-profile-item {
+  padding-top: 0.8rem;
+  padding-bottom: 0.8rem;
+}
+
+.navbar-menu-link,
+.navbar-profile-link {
+  text-decoration: none;
+  color: black;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.active {
+  color: rgb(255, 255, 255);
+  display: block;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: rgb(5, 122, 255);
+}
