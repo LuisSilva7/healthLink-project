@@ -1,0 +1,109 @@
+.location-container {
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 4rem;
+}
+
+.location-title {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1rem;
+  align-items: center;
+}
+
+.location-title h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.location-title hr {
+  border: 2px solid rgb(59, 130, 246);
+  border-radius: 15px;
+  width: 45%;
+}
+
+.location-display {
+  display: flex;
+  flex-direction: column;
+  padding: 2rem;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.151);
+  border-radius: 8px;
+  background-color: rgb(242, 246, 248);
+}
+
+.location {
+  text-align: center;
+}
+
+.location-name {
+  color: rgb(100, 116, 139);
+  font-size: 1.5rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.location-address {
+  color: rgb(100, 116, 139);
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+}
+
+.location-number {
+  color: rgb(100, 116, 139);
+  font-size: 0.9rem;
+  font-weight: 500;
+  padding-bottom: 0.3rem;
+}
+
+.middle-line {
+  border: none;
+  height: 1px;
+  background-color: rgba(100, 116, 139, 0.336);
+  margin: 1.2rem 0;
+}
+
+.schedual {
+  text-align: center;
+}
+
+.schedual-title {
+  color: rgb(100, 116, 139);
+  font-size: 1.1rem;
+  font-weight: 600;
+  padding-bottom: 0.5rem;
+}
+
+.schedual-day {
+  color: rgb(100, 116, 139);
+  font-size: 0.9rem;
+  padding-bottom: 0.3rem;
+}
+
+@media (min-width: 800px) {
+  .location-display {
+    flex-direction: row;
+    column-gap: 2rem;
+    padding: 2.5rem 10rem;
+  }
+
+  .location {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    justify-content: center;
+  }
+
+  .schedual {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+  }
+
+  .middle-line {
+    border-left: 1px solid rgba(100, 116, 139, 0.336);
+    height: 150px; /* Altura da linha */
+  }
+}
