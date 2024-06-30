@@ -5,11 +5,20 @@
   height: 4rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
-  border: 1px solid black;
 }
 
 .navbar-menu-container {
   position: relative;
+}
+
+.healthLink-container {
+  display: none;
+}
+
+.right-side {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
 }
 
 .menu-icon-container,
@@ -20,6 +29,11 @@
   height: 3rem;
   width: 3rem;
   border-radius: 50%;
+}
+
+.profile-icon-container {
+  height: 2.5rem;
+  width: 2.5rem;
 }
 
 .menu-icon-container-active {
@@ -34,10 +48,13 @@
 
 .menu-icon {
   font-size: 2.3rem;
+  transition: all 1s ease;
 }
 
 .profile-icon {
-  font-size: 3rem;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
 }
 
 .navbar-menu,
@@ -58,7 +75,7 @@
   position: absolute;
   top: 4rem;
   left: 0.5rem;
-  padding: 0.2rem 1rem;
+  padding: 0 0.5rem;
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
@@ -73,7 +90,7 @@
   right: 0.5rem;
   padding: 0.2rem 1rem;
   background-color: rgb(241, 241, 241);
-  width: 10rem;
+  width: 12rem;
   border-radius: 10px;
   opacity: 1;
   visibility: visible;
@@ -89,8 +106,8 @@
 
 .navbar-menu-item,
 .navbar-profile-item {
-  padding-top: 0.8rem;
-  padding-bottom: 0.8rem;
+  padding-top: 0.7rem;
+  padding-bottom: 0.7rem;
 }
 
 .navbar-menu-link,
@@ -99,12 +116,89 @@
   color: black;
   font-size: 0.9rem;
   font-weight: 600;
+  padding: 0.9rem 0.5rem;
+}
+
+.navbar-menu-link:not(.active):hover,
+.navbar-profile-link:not(.active):hover {
+  color: rgb(157, 208, 238);
 }
 
 .active {
   color: rgb(255, 255, 255);
   display: block;
-  padding: 1rem;
   border-radius: 8px;
-  background-color: rgb(5, 122, 255);
+  background-color: rgb(60, 151, 255);
+}
+
+@media (min-width: 900px) {
+  .navbar-container {
+    padding-left: 2%;
+    padding-right: 2%;
+    column-gap: 1.5rem;
+  }
+
+  .right-side {
+    width: auto;
+  }
+
+  .navbar-menu-container {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+
+  .menu-icon-container {
+    display: none;
+  }
+
+  .healthLink-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .helthLink-logo-container {
+    height: 3rem;
+    width: 3rem;
+  }
+
+  .helthLink-logo-image {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+  }
+
+  .helthLink-title {
+    margin-left: 0.7rem;
+    font-size: 1.7rem;
+    font-weight: bold;
+    font-style: italic;
+    color: rgb(8, 119, 170);
+  }
+
+  .navbar-menu,
+  .navbar-menu-active {
+    position: static;
+    display: flex;
+    align-items: center;
+    background-color: transparent;
+    opacity: 1;
+    visibility: visible;
+    width: auto;
+    padding: 0;
+  }
+
+  .navbar-menu-items {
+    flex-direction: row;
+    display: flex;
+    align-items: center;
+  }
+
+  .navbar-menu-item {
+    padding: 0;
+  }
+
+  .navbar-menu-link {
+    padding: 0.5rem 1rem;
+  }
 }
