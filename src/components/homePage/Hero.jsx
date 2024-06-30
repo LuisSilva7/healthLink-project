@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./hero.module.css";
+import { Link } from "react-router-dom";
 
 const Teste = () => {
   return (
@@ -11,7 +12,11 @@ const Teste = () => {
         <h3 className={styles["hero-sub-title"]}>
           Book your appointment online today!
         </h3>
-        <button className={styles["hero-button"]}>BOOK NOW</button>
+        <button className={styles["hero-button"]}>
+          <Link to="/booking" className={styles["button-link"]}>
+            BOOK NOW
+          </Link>
+        </button>
       </div>
     </div>
   );
