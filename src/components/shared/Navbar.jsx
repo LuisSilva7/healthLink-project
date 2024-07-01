@@ -84,18 +84,6 @@ const Navbar = () => {
               </li>
               <li className={styles["navbar-menu-item"]}>
                 <NavLink
-                  to="/gallery"
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles["navbar-menu-link"]} ${styles["active"]}`
-                      : styles["navbar-menu-link"]
-                  }
-                >
-                  GALLERY
-                </NavLink>
-              </li>
-              <li className={styles["navbar-menu-item"]}>
-                <NavLink
                   to="/about"
                   className={({ isActive }) =>
                     isActive

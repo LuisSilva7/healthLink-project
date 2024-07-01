@@ -59,3 +59,23 @@
 .faq-container.active .faqs-answer {
   display: block;
 }
+
+@media (min-width: 1000px) {
+  .faqs-container {
+    padding-top: 3rem;
+    padding-left: 20rem;
+    padding-right: 20rem;
+  }
+
+  .faqs-question {
+    font-size: 1.1rem;
+  }
+
+  .arrow-icon {
+    font-size: 1.8rem;
+  }
+
+  .faqs-answer {
+    font-size: 1rem;
+  }
+}

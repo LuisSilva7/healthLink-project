@@ -18,7 +18,7 @@ const Faqs = () => {
     {
       question: "What types of health insurance do you accept?",
       answer:
-        "We accept most health insurance plans. To confirm if we accept your specific plan, please contact our reception or check the insurance section on our website.",
+        "We accept most health insurance plans. To confirm if we accept your specific plan, please contact our reception.",
     },
     {
       question: "What are the clinic's operating hours?",
