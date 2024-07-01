@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "../components/shared/Navbar";
 import Info from "../components/aboutPage/Info";
 import Faqs from "../components/aboutPage/Faqs";
+import Footer from "../components/shared/Footer";
 
 const AboutPage = () => {
   return (
@@ -9,6 +10,7 @@ const AboutPage = () => {
       <Navbar />
       <Info />
       <Faqs />
+      <Footer />
     </>
   );
 };
