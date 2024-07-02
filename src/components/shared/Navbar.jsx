@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../../UserContext";
 import { NavLink, Link } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { IoMenu } from "react-icons/io5";
@@ -9,6 +10,13 @@ import healthLinkLogo from "../../assets/images/healthLink-logo.png";
 const Navbar = () => {
   const [openMenu, setOpenMenu] = useState(false);
   const [openProfile, setOpenProfile] = useState(false);
+  const { userLoggedIn, setUserLoggedIn } = useContext(UserContext);
+
+  const handleSignOut = () => {
+    setUserLoggedIn(false);
+    localStorage.setItem("loginDefault", JSON.stringify(false));
+    localStorage.setItem("loginUser", JSON.stringify(false));
+  };
 
   return (
     <nav className={styles["navbar-container"]}>
@@ -115,19 +123,35 @@ const Navbar = () => {
             }
           >
             <ul className={styles["navbar-profile-items"]}>
-              <li className={styles["navbar-profile-item"]}>
-                <NavLink to="/login" className={styles["navbar-profile-link"]}>
-                  LOGIN
-                </NavLink>
-              </li>
-              <li className={styles["navbar-profile-item"]}>
-                <NavLink
-                  to="/profile"
-                  className={styles["navbar-profile-link"]}
-                >
-                  PROFILE
-                </NavLink>
-              </li>
+              {userLoggedIn ? (
+                <>
+                  <li className={styles["navbar-profile-item"]}>
+                    <NavLink
+                      to="/profile"
+                      className={styles["navbar-profile-link"]}
+                    >
+                      PROFILE
+                    </NavLink>
+                  </li>
+                  <li className={styles["navbar-profile-item"]}>
+                    <div
+                      onClick={handleSignOut}
+                      className={styles["navbar-profile-link"]}
+                    >
+                      SIGN OUT
+                    </div>
+                  </li>
+                </>
+              ) : (
+                <li className={styles["navbar-profile-item"]}>
+                  <NavLink
+                    to="/login"
+                    className={styles["navbar-profile-link"]}
+                  >
+                    LOGIN
+                  </NavLink>
+                </li>
+              )}
             </ul>
           </div>
         </div>

@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
+import { UserContext } from "../../UserContext";
 import styles from "./loginForm.module.css";
 import backgroundImage from "../../assets/images/login-background-image.png";
 import logo from "../../assets/images/healthLink-logo.png";
@@ -9,6 +10,7 @@ const LoginForm = () => {
 
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { setUserLoggedIn } = useContext(UserContext);
 
   const handleLogin = (event) => {
     event.preventDefault();
@@ -16,11 +18,15 @@ const LoginForm = () => {
     const storedUsername = JSON.parse(localStorage.getItem("username"));
     const storedPassword = JSON.parse(localStorage.getItem("password"));
 
-    if (
-      (username == storedUsername || username == "user") &&
-      (password == storedPassword || password == "pass")
-    ) {
-      localStorage.setItem("login", JSON.stringify(true));
+    if (username == storedUsername && password == storedPassword) {
+      localStorage.setItem("loginUser", JSON.stringify(true));
+      setUserLoggedIn(true);
+      navigate("/");
+    }
+
+    if (username == "user" && password == "pass") {
+      localStorage.setItem("loginDefault", JSON.stringify(true));
+      setUserLoggedIn(true);
       navigate("/");
     }
 
