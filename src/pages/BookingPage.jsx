@@ -1,5 +1,6 @@
 import React, { useEffect } from "react";
 import Navbar from "../components/shared/Navbar";
+import TopContainer from "../components/bookingPage/TopContainer";
 
 const BookingPage = () => {
   useEffect(() => {
@@ -9,6 +10,7 @@ const BookingPage = () => {
   return (
     <>
       <Navbar />
+      <TopContainer />
     </>
   );
 };

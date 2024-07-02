@@ -13,6 +13,7 @@ const Navbar = () => {
   const { userLoggedIn, setUserLoggedIn } = useContext(UserContext);
 
   const handleSignOut = () => {
+    setOpenProfile(!openProfile);
     setUserLoggedIn(false);
     localStorage.setItem("loginDefault", JSON.stringify(false));
     localStorage.setItem("loginUser", JSON.stringify(false));
