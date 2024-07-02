@@ -35,7 +35,7 @@ const Services = () => {
         "Permanent solutions for missing teeth, restoring your smile with natural-looking implants that function like real teeth.",
     },
     {
-      name: "Routine Check-ups and Cleanings",
+      name: "Routine Check-ups",
       description:
         "Regular dental examinations and cleanings to maintain optimal oral health, preventing cavities and gum disease.",
     },

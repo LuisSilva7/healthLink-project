@@ -1,0 +1,70 @@
+.service-box-container {
+  background-color: rgb(226, 232, 244);
+  padding: 2.5rem;
+  padding-bottom: 1rem;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+.service-group-title {
+  color: rgb(57, 78, 106);
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.service-info-box {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.service-line {
+  border: 1px solid rgba(73, 91, 116, 0.164);
+  margin-bottom: 1rem;
+}
+
+.service-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+}
+
+.service-title {
+  color: rgb(57, 78, 106);
+  font-weight: 600;
+}
+
+.service-cost {
+  color: rgb(57, 78, 106);
+  font-weight: 500;
+}
+
+.book-now-button {
+  align-self: flex-end;
+  margin-bottom: 2rem;
+}
+
+.book-now-button {
+  align-self: flex-end;
+  padding: 0.5rem 0.5rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.7rem;
+}
+
+.book-now-button:hover {
+  background-color: #0056b3;
+}
+
+@media (max-width: 800px) {
+  .service-box-container {
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    padding-bottom: 0;
+  }
+}
