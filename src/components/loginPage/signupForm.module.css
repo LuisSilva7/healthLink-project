@@ -1,0 +1,171 @@
+.loginForm-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.wrapper {
+  height: 40rem;
+  width: 75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 1px 5px rgba(0, 102, 255, 0.397);
+}
+
+.loginForm-left {
+  height: 100%;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+  padding: 4rem;
+}
+
+.top-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 3rem;
+}
+
+.text-hello {
+  color: rgb(18, 140, 197);
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+.text-welcome {
+  color: rgb(8, 119, 170);
+  font-weight: 800;
+  font-size: 3.7rem;
+}
+
+.logo-container {
+  height: 100px;
+  width: 100px;
+}
+
+.logo-image {
+  height: 100%;
+  width: 100%;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-names {
+  display: flex;
+  column-gap: 1rem;
+}
+
+.form-container input {
+  padding: 0.9rem;
+  font-size: 1.2rem;
+  border: 1px solid rgba(122, 122, 122, 0.356);
+  border-radius: 4px;
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+.form-container button {
+  color: white;
+  padding: 0.9rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  border: none;
+  border-radius: 6px;
+  background-color: rgb(18, 140, 197);
+}
+
+.login-link {
+  text-align: center;
+  margin-top: 1rem;
+  color: rgb(18, 140, 197);
+}
+
+.loginForm-right {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  position: relative;
+}
+
+.loginForm-right img {
+  height: 100%;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+
+.loginForm-right h2 {
+  position: absolute;
+  font-style: italic;
+  top: 30%;
+  left: 5%;
+  right: 10%;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.loginForm-right h3 {
+  margin-top: 8rem;
+  position: absolute;
+  font-style: italic;
+  top: 30%;
+  left: 5%;
+  right: 10%;
+  color: white;
+  font-weight: 400;
+  font-size: 1.3rem;
+}
+
+.logo-container-bottom {
+  display: none;
+}
+
+@media (max-width: 1300px) {
+  .loginForm-container {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  .loginForm-right {
+    display: none;
+  }
+}
+
+@media (max-width: 800px) {
+  .text-hello {
+    font-size: 2rem;
+  }
+
+  .text-welcome {
+    font-size: 2.7rem;
+  }
+
+  .logo-container {
+    height: 75px;
+    width: 75px;
+  }
+}
+
+@media (max-width: 600px) {
+  .loginForm-left {
+    padding: 3rem 2rem;
+    padding-bottom: 0;
+  }
+
+  .top-container-right {
+    display: none;
+  }
+
+  .login-link {
+    margin-bottom: rem;
+  }
+}

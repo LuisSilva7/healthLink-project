@@ -1,9 +1,9 @@
 import React, { useEffect } from "react";
-import LoginForm from "../components/loginPage/LoginForm";
+import SignupForm from "../components/loginPage/SignupForm";
 import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 
-const LoginPage = () => {
+const SignupPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -11,10 +11,10 @@ const LoginPage = () => {
   return (
     <>
       <Navbar />
-      <LoginForm />
+      <SignupForm />
       <Footer />
     </>
   );
 };
 
-export default LoginPage;
+export default SignupPage;
