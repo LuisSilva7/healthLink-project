@@ -41,12 +41,12 @@ const ProfilePage = () => {
   }, [userInfo]);
 
   return (
-    <>
+    <div className="container">
       <Navbar />
       <ProfileContainer userInfo={userInfo} />
       <AppointmentsList appointments={appointments} />
       <Footer />
-    </>
+    </div>
   );
 };
 

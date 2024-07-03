@@ -69,8 +69,7 @@
   object-fit: cover;
 }
 
-.navbar-menu,
-.navbar-profile {
+.navbar-menu {
   position: absolute;
   top: 4rem;
   left: 0.5rem;
@@ -78,10 +77,36 @@
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 0.3s ease;
-  z-index: 100;
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideOut 0.5s forwards;
+}
+
+@keyframes slideOut {
+  to {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+}
+
+.navbar-profile {
+  position: absolute;
+  top: 4.5rem;
+  right: 0.5rem;
+  padding: 0.5rem 0.5rem;
+  background-color: rgb(241, 241, 241);
+  width: 12rem;
+  border-radius: 10px;
+  opacity: 1;
+  transform: translateX(0);
+  animation: slideOut2 0.5s forwards;
+}
+
+@keyframes slideOut2 {
+  to {
+    opacity: 0;
+    transform: translateX(100%);
+  }
 }
 
 .navbar-menu-active {
@@ -92,10 +117,12 @@
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
-  opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease;
   z-index: 100;
+  opacity: 0;
+  transform: translateX(-100%);
+  animation: slideIn 0.5s forwards;
 }
 
 .navbar-profile-active {
@@ -106,10 +133,19 @@
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
-  opacity: 1;
   visibility: visible;
   transition: opacity 0.3s ease;
   z-index: 100;
+  opacity: 0;
+  transform: translateX(100%);
+  animation: slideIn 0.5s forwards;
+}
+
+@keyframes slideIn {
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
 }
 
 .navbar-menu-items,
