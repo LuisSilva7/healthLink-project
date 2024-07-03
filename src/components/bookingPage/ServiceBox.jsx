@@ -19,6 +19,7 @@ const ServiceBox = ({ service, setSelectedContainer, setServiceChoosen }) => {
               price: `${service[0].price}`,
               date: "",
               time: "",
+              user: "",
             });
             setSelectedContainer("DateContainer");
           }}
@@ -41,6 +42,7 @@ const ServiceBox = ({ service, setSelectedContainer, setServiceChoosen }) => {
               price: `${service[1].price}`,
               date: "",
               time: "",
+              user: "",
             });
             setSelectedContainer("DateContainer");
           }}
@@ -63,6 +65,7 @@ const ServiceBox = ({ service, setSelectedContainer, setServiceChoosen }) => {
               price: `${service[2].price}`,
               date: "",
               time: "",
+              user: "",
             });
             setSelectedContainer("DateContainer");
           }}

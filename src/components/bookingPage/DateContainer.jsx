@@ -3,12 +3,7 @@ import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css";
 import styles from "./dateContainer.module.css";
 
-const DateContainer = ({
-  selectedContainer,
-  setSelectedContainer,
-  updateService,
-  serviceChoosen,
-}) => {
+const DateContainer = ({ setSelectedContainer, updateService }) => {
   const today = new Date();
   const [selectedDate, setSelectedDate] = useState(today.toDateString());
   const [selectedTime, setSelectedTime] = useState("09:00 AM");

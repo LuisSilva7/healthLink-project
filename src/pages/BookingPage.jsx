@@ -14,24 +14,33 @@ const BookingPage = () => {
     price: "",
     date: "",
     time: "",
+    user: "",
   });
-
-  const updateService = (date, time) => {
-    setServiceChoosen({
-      ...serviceChoosen,
-      date: date,
-      time: time,
-    });
-  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const updateService = (date, time) => {
+    let user = "";
+    if (JSON.parse(localStorage.getItem("loginUser"))) {
+      user = "loginUser";
+    } else {
+      user = "loginDefault";
+    }
+
+    setServiceChoosen({
+      ...serviceChoosen,
+      date: date,
+      time: time,
+      user: user,
+    });
+  };
+
   const showContainer = () => {
     if (selectedContainer === "ServiceContainer")
       return (
         <ServiceContainer
-          selectedContainer={selectedContainer}
           setSelectedContainer={setSelectedContainer}
           setServiceChoosen={setServiceChoosen}
         />
@@ -39,18 +48,14 @@ const BookingPage = () => {
     if (selectedContainer === "DateContainer")
       return (
         <DateContainer
-          selectedContainer={selectedContainer}
           setSelectedContainer={setSelectedContainer}
           updateService={updateService}
-          serviceChoosen={serviceChoosen}
         />
       );
     if (selectedContainer === "ConfirmContainer")
       return (
         <ConfirmContainer
-          selectedContainer={selectedContainer}
           setSelectedContainer={setSelectedContainer}
-          setServiceChoosen={setServiceChoosen}
           serviceChoosen={serviceChoosen}
         />
       );

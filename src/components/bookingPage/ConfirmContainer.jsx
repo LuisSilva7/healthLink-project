@@ -3,12 +3,7 @@ import styles from "./confirmContainer.module.css";
 import { useState, useEffect } from "react";
 import { useNavigate, Link } from "react-router-dom";
 
-const ConfirmContainer = ({
-  selectedContainer,
-  setSelectedContainer,
-  setServiceChoosen,
-  serviceChoosen,
-}) => {
+const ConfirmContainer = ({ setSelectedContainer, serviceChoosen }) => {
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const navigate = useNavigate();
 
@@ -20,8 +15,11 @@ const ConfirmContainer = ({
       setIsLoggedIn(true);
   }, []);
 
+  const cancel = () => {
+    setSelectedContainer("DateContainer");
+  };
+
   const confirm = () => {
-    console.log(serviceChoosen);
     if (localStorage.getItem("appointments")) {
       const appointments = JSON.parse(localStorage.getItem("appointments"));
       appointments.push(serviceChoosen);
@@ -77,12 +75,20 @@ const ConfirmContainer = ({
             <p className={styles["service-time"]}>{serviceChoosen.time}</p>
           </div>
           {isLoggedIn ? (
-            <button
-              onClick={() => confirm()}
-              className={styles["confirm-button"]}
-            >
-              Confirm
-            </button>
+            <div className={styles["buttons"]}>
+              <button
+                onClick={() => cancel()}
+                className={styles["cancel-button"]}
+              >
+                Cancel
+              </button>
+              <button
+                onClick={() => confirm()}
+                className={styles["confirm-button"]}
+              >
+                Confirm
+              </button>
+            </div>
           ) : (
             <Link to="/login" className={styles["confirm-button"]}>
               LogIn First

@@ -2,11 +2,7 @@ import React from "react";
 import styles from "./serviceContainer.module.css";
 import ServiceBox from "./ServiceBox";
 
-const TopContainer = ({
-  selectedContainer,
-  setSelectedContainer,
-  setServiceChoosen,
-}) => {
+const TopContainer = ({ setSelectedContainer, setServiceChoosen }) => {
   const dermatologyServices = [
     {
       name: "Acne Treatment",

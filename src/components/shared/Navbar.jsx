@@ -1,6 +1,6 @@
 import React, { useState, useContext } from "react";
 import { UserContext } from "../../UserContext";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink, Link, useNavigate } from "react-router-dom";
 import styles from "./navbar.module.css";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
@@ -12,11 +12,15 @@ const Navbar = () => {
   const [openProfile, setOpenProfile] = useState(false);
   const { userLoggedIn, setUserLoggedIn } = useContext(UserContext);
 
+  const navigate = useNavigate();
+
   const handleSignOut = () => {
     setOpenProfile(!openProfile);
     setUserLoggedIn(false);
     localStorage.setItem("loginDefault", JSON.stringify(false));
     localStorage.setItem("loginUser", JSON.stringify(false));
+
+    navigate("/");
   };
 
   return (
