@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   row-gap: 2rem;
-  padding-bottom: 13rem;
+  padding-bottom: 20rem;
 }
 
 .appointments-title-container {
@@ -56,7 +56,7 @@
 
 @media (min-width: 800px) {
   .appointments-list-container {
-    padding-bottom: 12rem;
+    padding-bottom: 20rem;
   }
 
   .appointments-grid {
