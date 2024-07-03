@@ -17,7 +17,7 @@ const ProfilePage = () => {
       let user = { name: "", lastName: "" };
       user.name = JSON.parse(localStorage.getItem("name"));
       user.lastName = JSON.parse(localStorage.getItem("lastName"));
-
+      console.log(user);
       setUserInfo(user);
     }
   }, []);
@@ -35,10 +35,10 @@ const ProfilePage = () => {
           (appointment) => appointment.user === "loginUser"
         );
       }
-
+      console.log(appoints);
       setAppointments(appoints);
     }
-  }, []);
+  }, [userInfo]);
 
   return (
     <>
