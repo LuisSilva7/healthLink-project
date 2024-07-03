@@ -1,10 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./serviceBox.module.css";
 
 const ServiceBox = ({ service, setSelectedContainer, setServiceChoosen }) => {
+  const [serviceName, setServiceName] = useState("");
+
+  useEffect(() => {
+    if (service[0].category === "dermatologyServices")
+      setServiceName("Dermatology Services");
+
+    if (service[0].category === "dentistryServices")
+      setServiceName("Dentistry Services");
+
+    if (service[0].category === "ophthalmologyServices")
+      setServiceName("Ophthalmology Services");
+  }, []);
+
   return (
     <div className={styles["service-box-container"]}>
-      <h3 className={styles["service-group-title"]}>Dermatology Services</h3>
+      <h3 className={styles["service-group-title"]}>{serviceName}</h3>
       <div className={styles["service-info-box"]}>
         <hr className={styles["service-line"]} />
         <div className={styles["service-info"]}>
