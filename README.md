@@ -16,7 +16,7 @@
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/user/healthlink.git
+   git clone https://github.com/LuisSilva7/healthLink-project.git
 
    ```
 
