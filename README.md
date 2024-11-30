@@ -23,7 +23,7 @@
 2. Navigate to the project directory:
 
    ```bash
-   cd healthlink
+   cd healthlink-project
 
    ```
 
