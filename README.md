@@ -1,8 +1,44 @@
-# React + Vite
+# HealthLink - Medical Appointment Booking System
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+**HealthLink** is a simple and intuitive platform for scheduling medical appointments online. Users can book appointments based on availability and choose the desired date and time.
 
-Currently, two official plugins are available:
+## Technologies Used
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React** - JavaScript library for building user interfaces.
+- **HTML** - Provides the structure of the web application.
+- **CSS** - Used for styling the interface.
+- **localStorage** - Stores data locally in the browser, such as login state and appointment details.
+
+## How to Run the Project Locally
+
+### Installation Steps
+
+1. Clone the repository:
+
+   ```bash
+   git clone https://github.com/user/healthlink.git
+
+   ```
+
+2. Navigate to the project directory:
+
+   ```bash
+   cd healthlink
+
+   ```
+
+3. Install project dependencies:
+
+   ```bash
+   npm install
+
+   ```
+
+4. Start the development server:
+
+   ```bash
+   npm run dev
+
+   ```
+
+The application will be available at http://localhost:5000 in your browser.

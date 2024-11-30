@@ -77,16 +77,15 @@
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
-  opacity: 1;
-  transform: translateX(0);
-  animation: slideOut 0.5s forwards;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
-@keyframes slideOut {
-  to {
-    opacity: 0;
-    transform: translateX(-100%);
-  }
+.navbar-menu-active {
+  opacity: 1;
+  transform: translateX(0);
+  z-index: 100;
 }
 
 .navbar-profile {
@@ -97,55 +96,15 @@
   background-color: rgb(241, 241, 241);
   width: 12rem;
   border-radius: 10px;
-  opacity: 1;
-  transform: translateX(0);
-  animation: slideOut2 0.5s forwards;
-}
-
-@keyframes slideOut2 {
-  to {
-    opacity: 0;
-    transform: translateX(100%);
-  }
-}
-
-.navbar-menu-active {
-  position: absolute;
-  top: 4rem;
-  left: 0.5rem;
-  padding: 0.5rem 0.5rem;
-  background-color: rgb(241, 241, 241);
-  width: 12rem;
-  border-radius: 10px;
-  visibility: visible;
-  transition: opacity 0.3s ease;
-  z-index: 100;
   opacity: 0;
-  transform: translateX(-100%);
-  animation: slideIn 0.5s forwards;
+  transform: translateX(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
 }
 
 .navbar-profile-active {
-  position: absolute;
-  top: 4.5rem;
-  right: 0.5rem;
-  padding: 0.5rem 0.5rem;
-  background-color: rgb(241, 241, 241);
-  width: 12rem;
-  border-radius: 10px;
-  visibility: visible;
-  transition: opacity 0.3s ease;
+  opacity: 1;
+  transform: translateX(0);
   z-index: 100;
-  opacity: 0;
-  transform: translateX(100%);
-  animation: slideIn 0.5s forwards;
-}
-
-@keyframes slideIn {
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
 }
 
 .navbar-menu-items,
