@@ -75,6 +75,44 @@ If you prefer to run the application inside a Docker container, follow these ste
 
 The application will be available at [http://localhost](http://localhost) in your browser.
 
+## Screenshots
+
+### Home Page
+
+![Home Page](screenshots/home.jpg)
+
+### About Page
+
+![About Page](screenshots/about.jpg)
+
+### Register Page
+
+![Register Page](screenshots/register.jpg)
+
+### Login Page
+
+![Login Page](screenshots/login.jpg)
+
+### Services Page
+
+![Services Page](screenshots/services.jpg)
+
+### Booking1 Page
+
+![Booking1 Page](screenshots/booking1.jpg)
+
+### Booking2 Page
+
+![Booking2 Page](screenshots/booking2.jpg)
+
+### Booking3 Page
+
+![Booking3 Page](screenshots/booking3.jpg)
+
+### Profile Page
+
+![Profile Page](screenshots/profile.jpg)
+
 ### Maintainer
 
 - **Luis Silva** (Owner/Developer)
