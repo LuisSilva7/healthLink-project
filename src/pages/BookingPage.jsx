@@ -4,6 +4,7 @@ import ServiceContainer from "../components/bookingPage/ServiceContainer";
 import DateContainer from "../components/bookingPage/DateContainer";
 import ConfirmContainer from "../components/bookingPage/ConfirmContainer";
 import Footer from "../components/shared/Footer";
+import styles from "../components/shared/layout.module.css";
 
 const BookingPage = () => {
   const [selectedContainer, setSelectedContainer] =
@@ -62,11 +63,11 @@ const BookingPage = () => {
   };
 
   return (
-    <>
+    <div className={styles.layout}>
       <Navbar />
-      {showContainer()}
+      <main className={styles.content}>{showContainer()}</main>
       <Footer />
-    </>
+    </div>
   );
 };
 

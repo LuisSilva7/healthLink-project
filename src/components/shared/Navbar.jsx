@@ -1,164 +1,130 @@
 import React, { useState, useContext } from "react";
-import { UserContext } from "../../UserContext";
 import { NavLink, Link, useNavigate } from "react-router-dom";
-import styles from "./navbar.module.css";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
-import userLogo from "../../assets/images/user-logo.png";
+import { UserContext } from "../../UserContext";
+import styles from "./Navbar.module.css";
 import healthLinkLogo from "../../assets/images/healthLink-logo.png";
+import userLogo from "../../assets/images/user-logo.png";
 
 const Navbar = () => {
-  const [openMenu, setOpenMenu] = useState(false);
-  const [openProfile, setOpenProfile] = useState(false);
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isProfileOpen, setIsProfileOpen] = useState(false);
   const { userLoggedIn, setUserLoggedIn } = useContext(UserContext);
-
   const navigate = useNavigate();
 
   const handleSignOut = () => {
-    setOpenProfile(!openProfile);
     setUserLoggedIn(false);
     localStorage.setItem("loginDefault", JSON.stringify(false));
     localStorage.setItem("loginUser", JSON.stringify(false));
-
     navigate("/");
+    setIsProfileOpen(false);
   };
 
   return (
-    <nav className={styles["navbar-container"]}>
-      <Link to="/" className={styles["healthLink-container"]}>
-        <div className={styles["helthLink-logo-container"]}>
-          <img
-            src={healthLinkLogo}
-            className={styles["helthLink-logo-image"]}
-          />
-        </div>
-        <span className={styles["helthLink-title"]}>HealthLink</span>
+    <nav className={styles.navbar}>
+      <Link to="/" className={styles.logoContainer}>
+        <img
+          src={healthLinkLogo}
+          alt="HealthLink Logo"
+          className={styles.logo}
+        />
+        <span className={styles.title}>HealthLink</span>
       </Link>
-      <div className={styles["right-side"]}>
-        <div className={styles["navbar-menu-container"]}>
-          <div
-            className={
-              openMenu
-                ? styles["menu-icon-container-active"]
-                : styles["menu-icon-container"]
-            }
-            onClick={() => {
-              setOpenMenu(!openMenu);
-              if (openProfile) setOpenProfile(!openProfile);
-            }}
-          >
-            {openMenu ? (
-              <MdClose className={styles["menu-icon"]} />
-            ) : (
-              <IoMenu className={styles["menu-icon"]} />
-            )}
-          </div>
-          <div
-            className={
-              openMenu ? styles["navbar-menu-active"] : styles["navbar-menu"]
-            }
-          >
-            <ul className={styles["navbar-menu-items"]}>
-              <li className={styles["navbar-menu-item"]}>
-                <NavLink
-                  to="/"
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles["navbar-menu-link"]} ${styles["active"]}`
-                      : styles["navbar-menu-link"]
-                  }
-                >
-                  HOME
-                </NavLink>
-              </li>
-              <li className={styles["navbar-menu-item"]}>
-                <NavLink
-                  to="/booking"
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles["navbar-menu-link"]} ${styles["active"]}`
-                      : styles["navbar-menu-link"]
-                  }
-                >
-                  BOOKING
-                </NavLink>
-              </li>
-              <li className={styles["navbar-menu-item"]}>
-                <NavLink
-                  to="/services"
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles["navbar-menu-link"]} ${styles["active"]}`
-                      : styles["navbar-menu-link"]
-                  }
-                >
-                  SERVICES
-                </NavLink>
-              </li>
-              <li className={styles["navbar-menu-item"]}>
-                <NavLink
-                  to="/about"
-                  className={({ isActive }) =>
-                    isActive
-                      ? `${styles["navbar-menu-link"]} ${styles["active"]}`
-                      : styles["navbar-menu-link"]
-                  }
-                >
-                  ABOUT
-                </NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div className={styles["navbar-profile-container"]}>
-          <div
-            className={styles["profile-icon-container"]}
-            onClick={() => {
-              setOpenProfile(!openProfile);
-              if (openMenu) setOpenMenu(!openMenu);
-            }}
-          >
-            <img src={userLogo} className={styles["profile-icon"]} />
-          </div>
-          <div
-            className={
-              openProfile
-                ? styles["navbar-profile-active"]
-                : styles["navbar-profile"]
-            }
-          >
-            <ul className={styles["navbar-profile-items"]}>
+
+      <div className={styles.rightSection}>
+        <ul className={`${styles.navLinks} ${isMenuOpen ? styles.active : ""}`}>
+          <li>
+            <NavLink to="/" className={styles.navLink}>
+              Home
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/booking" className={styles.navLink}>
+              Booking
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/services" className={styles.navLink}>
+              Services
+            </NavLink>
+          </li>
+          <li>
+            <NavLink to="/about" className={styles.navLink}>
+              About
+            </NavLink>
+          </li>
+
+          {isMenuOpen && (
+            <li className={styles.mobileAuth}>
               {userLoggedIn ? (
                 <>
-                  <li className={styles["navbar-profile-item"]}>
-                    <NavLink
-                      to="/profile"
-                      className={styles["navbar-profile-link"]}
-                    >
-                      PROFILE
-                    </NavLink>
-                  </li>
-                  <li className={styles["navbar-profile-item"]}>
-                    <div
-                      onClick={handleSignOut}
-                      className={styles["navbar-profile-link"]}
-                    >
-                      SIGN OUT
-                    </div>
-                  </li>
+                  <div
+                    onClick={() => {
+                      setIsMenuOpen(false);
+                      navigate("/profile");
+                    }}
+                    className={styles.profileOption}
+                  >
+                    Profile
+                  </div>
+                  <div onClick={handleSignOut} className={styles.profileOption}>
+                    Sign Out
+                  </div>
                 </>
               ) : (
-                <li className={styles["navbar-profile-item"]}>
-                  <NavLink
-                    to="/login"
-                    className={styles["navbar-profile-link"]}
-                  >
-                    LOGIN
-                  </NavLink>
-                </li>
+                <div
+                  onClick={() => {
+                    setIsMenuOpen(false);
+                    navigate("/login");
+                  }}
+                  className={styles.profileOption}
+                >
+                  Login
+                </div>
               )}
-            </ul>
-          </div>
+            </li>
+          )}
+        </ul>
+
+        <div className={styles.profileContainer}>
+          <img
+            src={userLogo}
+            alt="User Avatar"
+            className={styles.profileIcon}
+            onClick={() => setIsProfileOpen(!isProfileOpen)}
+          />
+          {isProfileOpen && (
+            <div className={styles.profileDropdown}>
+              {userLoggedIn ? (
+                <>
+                  <div
+                    onClick={() => navigate("/profile")}
+                    className={styles.profileOption}
+                  >
+                    Profile
+                  </div>
+                  <div onClick={handleSignOut} className={styles.profileOption}>
+                    Sign Out
+                  </div>
+                </>
+              ) : (
+                <div
+                  onClick={() => navigate("/login")}
+                  className={styles.profileOption}
+                >
+                  Login
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+
+        <div
+          className={styles.menuIcon}
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          {isMenuOpen ? <MdClose /> : <IoMenu />}
         </div>
       </div>
     </nav>

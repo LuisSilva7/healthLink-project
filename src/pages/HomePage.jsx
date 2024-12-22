@@ -4,6 +4,7 @@ import Hero from "../components/homePage/Hero";
 import Services from "../components/homePage/Services";
 import Location from "../components/homePage/Location";
 import Footer from "../components/shared/Footer";
+import styles from "../components/shared/layout.module.css";
 
 const HomePage = () => {
   useEffect(() => {
@@ -11,13 +12,15 @@ const HomePage = () => {
   }, []);
 
   return (
-    <>
+    <div className={styles.layout}>
       <Navbar />
-      <Hero />
-      <Services />
-      <Location />
+      <main className={styles.content}>
+        <Hero />
+        <Services />
+        <Location />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 

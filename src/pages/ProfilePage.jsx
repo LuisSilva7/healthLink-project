@@ -3,6 +3,7 @@ import Navbar from "../components/shared/Navbar";
 import Footer from "../components/shared/Footer";
 import ProfileContainer from "../components/profilePage/ProfileContainer";
 import AppointmentsList from "../components/profilePage/AppointmentsList";
+import styles from "../components/shared/layout.module.css";
 
 const ProfilePage = () => {
   const [appointments, setAppointments] = useState([]);
@@ -41,10 +42,12 @@ const ProfilePage = () => {
   }, [userInfo]);
 
   return (
-    <div className="container">
+    <div className={styles.layout}>
       <Navbar />
-      <ProfileContainer userInfo={userInfo} />
-      <AppointmentsList appointments={appointments} />
+      <main className={styles.content}>
+        <ProfileContainer userInfo={userInfo} />
+        <AppointmentsList appointments={appointments} />
+      </main>
       <Footer />
     </div>
   );

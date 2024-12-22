@@ -1,211 +1,158 @@
-.navbar-container {
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  z-index: 100;
-  background-color: white;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   height: 4rem;
-  padding-left: 0.5rem;
-  padding-right: 0.5rem;
-  box-shadow: 0 1px 5px rgba(68, 125, 209, 0.404);
+  background-color: white;
+  padding: 0 2rem;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  z-index: 100;
 }
 
-.navbar-menu-container {
-  position: relative;
-}
-
-.navbar-profile-container {
-  margin-left: 1.5rem;
-}
-
-.healthLink-container {
-  display: none;
-}
-
-.right-side {
-  display: flex;
-  justify-content: space-between;
-  width: 100%;
-}
-
-.menu-icon-container,
-.profile-icon-container {
+.logoContainer {
   display: flex;
   align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  cursor: pointer;
+  text-decoration: none;
 }
 
-.profile-icon-container {
+.logo {
   height: 2.5rem;
   width: 2.5rem;
-}
-
-.menu-icon-container-active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 3rem;
-  width: 3rem;
-  border-radius: 50%;
-  background-color: rgb(229, 231, 235);
-}
-
-.menu-icon {
-  font-size: 2.3rem;
-  transition: all 1s ease;
-}
-
-.profile-icon {
-  height: 100%;
-  width: 100%;
   object-fit: cover;
 }
 
-.navbar-menu {
-  position: absolute;
-  top: 4rem;
-  left: 0.5rem;
-  padding: 0.5rem 0.5rem;
-  background-color: rgb(241, 241, 241);
-  width: 12rem;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateX(-100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
+.title {
+  margin-left: 0.5rem;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #0877aa;
+  font-style: italic;
 }
 
-.navbar-menu-active {
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 100;
-}
-
-.navbar-profile {
-  position: absolute;
-  top: 4.5rem;
-  right: 0.5rem;
-  padding: 0.5rem 0.5rem;
-  background-color: rgb(241, 241, 241);
-  width: 12rem;
-  border-radius: 10px;
-  opacity: 0;
-  transform: translateX(100%);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-}
-
-.navbar-profile-active {
-  opacity: 1;
-  transform: translateX(0);
-  z-index: 100;
-}
-
-.navbar-menu-items,
-.navbar-profile-items {
+.rightSection {
   display: flex;
-  flex-direction: column;
-  list-style: none;
+  align-items: center;
+  gap: 3rem;
 }
 
-.navbar-menu-link,
-.navbar-profile-link {
+.navLinks {
+  display: flex;
+  list-style: none;
+  gap: 1rem;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.navLink {
   text-decoration: none;
   color: black;
-  font-size: 0.9rem;
-  font-weight: 600;
-  padding: 0.9rem 0.5rem;
-  display: block;
+  font-size: 1.1rem;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.navLink:hover {
+  color: #089ee0;
+}
+
+.profileContainer {
+  position: relative;
+  display: flex;
+  align-items: center;
   cursor: pointer;
 }
 
-.navbar-menu-link:not(.active):hover,
-.navbar-profile-link:not(.active):hover {
-  color: rgb(157, 208, 238);
+.profileIcon {
+  height: 2.5rem;
+  width: 2.5rem;
+  border-radius: 50%;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-.active {
-  color: rgb(255, 255, 255);
-  display: block;
+.profileDropdown {
+  position: absolute;
+  top: 3rem;
+  right: 0;
+  background-color: white;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   border-radius: 8px;
-  background-color: rgb(60, 151, 255);
+  padding: 1rem;
+  z-index: 200;
 }
 
-@media (min-width: 900px) {
-  .navbar-container {
-    padding-left: 2%;
-    padding-right: 2%;
-    column-gap: 1.5rem;
+.profileOption {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: black;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+}
+
+.profileOption:last-child {
+  margin-bottom: 0;
+}
+
+.profileOption:hover {
+  color: #089ee0;
+}
+
+.menuIcon {
+  display: none;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 1rem;
   }
 
-  .right-side {
-    width: auto;
+  .navLinks {
+    position: absolute;
+    top: 4rem;
+    left: 0;
+    background-color: white;
+    width: 100%;
+    padding: 1rem;
+    flex-direction: column;
+    align-items: flex-start;
+    transform: translateY(-100%);
+    opacity: 0;
+    visibility: hidden;
   }
 
-  .navbar-menu-container {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
+  .navLinks.active {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
   }
 
-  .menu-icon-container {
+  .menuIcon {
+    display: block;
+  }
+
+  .profileContainer {
     display: none;
   }
 
-  .healthLink-container {
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-  }
-
-  .helthLink-logo-container {
-    height: 3rem;
-    width: 3rem;
-  }
-
-  .helthLink-logo-image {
-    height: 100%;
+  .mobileAuth {
+    margin-top: 1rem;
+    border-top: 1px solid #ddd;
+    padding-top: 1rem;
     width: 100%;
-    object-fit: cover;
   }
 
-  .helthLink-title {
-    margin-left: 0.7rem;
-    font-size: 1.7rem;
-    font-weight: bold;
-    font-style: italic;
-    color: rgb(8, 119, 170);
+  .mobileAuth .profileOption {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #000;
   }
 
-  .navbar-menu,
-  .navbar-menu-active {
-    position: static;
-    display: flex;
-    align-items: center;
-    background-color: transparent;
-    opacity: 1;
-    visibility: visible;
-    width: auto;
-    padding: 0;
-  }
-
-  .navbar-menu-items {
-    flex-direction: row;
-    display: flex;
-    align-items: center;
-  }
-
-  .navbar-menu-item {
-    padding: 0;
-  }
-
-  .navbar-menu-link {
-    padding: 0.5rem 1rem;
+  .mobileAuth .profileOption:hover {
+    color: #089ee0;
   }
 }
