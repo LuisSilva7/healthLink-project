@@ -24,6 +24,11 @@ Scheduling medical appointments can often be a cumbersome process, requiring bot
 - **CSS**: Used for styling the interface.
 - **LocalStorage**: Stores data locally in the browser, such as login state and appointment details.
 
+## Link to Deployment
+
+The HealthLink app is deployed and can be accessed at the following link:
+[HealthLink Live](https://healthh-linkk.netlify.app)
+
 ## How to Run the Project Locally
 
 ### Installation Steps
@@ -60,20 +65,15 @@ If you prefer to run the application inside a Docker container, follow these ste
 1. **Build the Docker image:**
 
    ```bash
-   docker build -t healthlink-app .
+   docker build -t healthlink-project .
    ```
 
 2. **Run the Docker container:**
    ```bash
-   docker run -p 5000:5000 healthlink-app
+   docker run -p 80:80 healthlink-project
    ```
 
-The application will be available at [http://localhost:5000](http://localhost:5000) in your browser.
-
-## Link to Deployment
-
-The HealthLink app is deployed and can be accessed at the following link:
-[HealthLink Live](https://healthlink-project-live-url.com)
+The application will be available at [http://localhost](http://localhost) in your browser.
 
 ### Maintainer
 
