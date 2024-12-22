@@ -3,7 +3,7 @@ import { NavLink, Link, useNavigate } from "react-router-dom";
 import { IoMenu } from "react-icons/io5";
 import { MdClose } from "react-icons/md";
 import { UserContext } from "../../UserContext";
-import styles from "./Navbar.module.css";
+import styles from "./navbar.module.css";
 import healthLinkLogo from "../../assets/images/healthLink-logo.png";
 import userLogo from "../../assets/images/user-logo.png";
 
