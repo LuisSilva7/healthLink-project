@@ -1,7 +1,5 @@
 .faqs-container {
-  padding-top: 3rem;
-  padding-left: 2rem;
-  padding-right: 2rem;
+  padding: 3rem 2rem;
 }
 
 .faqs-title {

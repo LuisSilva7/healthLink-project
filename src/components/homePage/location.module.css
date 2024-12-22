@@ -1,5 +1,6 @@
 .location-container {
   padding-top: 3rem;
+  padding-bottom: 4rem;
   display: flex;
   flex-direction: column;
   align-items: center;
