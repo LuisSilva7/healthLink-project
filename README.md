@@ -2,18 +2,14 @@
 
 ## Description
 
-HealthLink is a simple and intuitive platform for scheduling medical appointments online. Users can book appointments based on availability and choose the desired date and time.
-
-## Why? (Motivation / Problem to Solve)
-
-Scheduling medical appointments can often be a cumbersome process, requiring both patients and medical professionals to spend unnecessary time coordinating. HealthLink was created to streamline the booking process, allowing users to schedule their appointments quickly and efficiently from the comfort of their own homes, and enabling healthcare providers to manage their schedules more effectively.
+HealthLink makes scheduling appointments simple and efficient. With an intuitive booking system, users can select their preferred date and time, while healthcare providers can effectively manage their schedules.
 
 ## Features
 
-- **Appointment Booking**: Users can browse available appointments and choose their preferred date and time, ensuring a smooth scheduling experience.
-- **User Authentication**: Login and registration system, allowing users to manage their accounts and access personalized features.
+- **Appointment Booking**: Users can browse available appointments and choose their preferred date and time.
+- **User Authentication**: Login and registration system, allowing users to manage their accounts.
 - **Profile Management**: A profile page where users can view their booked appointments.
-- **Service Information**: Users can easily explore the available medical services provided by the platform, helping them make informed decisions when booking appointments.
+- **Service Information**: Users can easily explore the available medical services provided by the platform.
 - **Platform Overview**: A comprehensive section providing an introduction to the platform’s features, mission, and functionality.
 - **Mobile-Responsive Design**: The platform is designed to provide a seamless user experience across all devices, with a fully responsive interface.
 
