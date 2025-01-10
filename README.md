@@ -85,10 +85,6 @@ The application will be available at [http://localhost](http://localhost) in you
 
 ![Register Page](screenshots/register.jpg)
 
-### Login Page
-
-![Login Page](screenshots/login.jpg)
-
 ### Services Page
 
 ![Services Page](screenshots/services.jpg)
