@@ -62,8 +62,14 @@ const ConfirmContainer = ({ setSelectedContainer, serviceChoosen }) => {
       {displayEventLine()}
       <div className={styles["confirm-container"]}>
         <h3 className={styles["service-group-title"]}>
-          {serviceChoosen.category}
+          {serviceChoosen.category === "dentistryServices" &&
+            "Dentistry Services"}
+          {serviceChoosen.category === "dermatologyServices" &&
+            "Dermatology Services"}
+          {serviceChoosen.category === "ophthalmologyServices" &&
+            "Ophthalmology Services"}
         </h3>
+
         <div className={styles["service-info-box"]}>
           <hr className={styles["service-line"]} />
           <div className={styles["service-top-info"]}>
