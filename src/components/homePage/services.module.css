@@ -28,6 +28,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 2rem;
 }
 
 .service-container {
@@ -36,6 +37,12 @@
   align-items: center;
   row-gap: 1rem;
   margin-bottom: 3.5rem;
+  background-color: #d2e6fb83;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 80%;
 }
 
 .service-image-container {
