@@ -21,13 +21,13 @@ const LoginForm = () => {
     if (username == storedUsername && password == storedPassword) {
       localStorage.setItem("loginUser", JSON.stringify(true));
       setUserLoggedIn(true);
-      navigate("/");
+      navigate("/profile");
     }
 
     if (username == "user" && password == "pass") {
       localStorage.setItem("loginDefault", JSON.stringify(true));
       setUserLoggedIn(true);
-      navigate("/");
+      navigate("/profile");
     }
 
     setUsername("");
