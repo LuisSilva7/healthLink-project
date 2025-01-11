@@ -106,6 +106,10 @@ The application will be available at [http://localhost](http://localhost) in you
 
 ![Profile Page](screenshots/profile.jpg)
 
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+
 ### Maintainer
 
 - **Luis Silva** (Owner/Developer)
