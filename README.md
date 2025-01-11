@@ -13,7 +13,7 @@ HealthLink makes scheduling appointments simple and efficient. With an intuitive
 - **Platform Overview**: A comprehensive section providing an introduction to the platform’s features, mission, and functionality.
 - **Mobile-Responsive Design**: The platform is designed to provide a seamless user experience across all devices, with a fully responsive interface.
 
-## Tech Stack
+## Technologies Used
 
 - **React**: JavaScript library for building user interfaces.
 - **HTML**: Provides the structure of the web application.
