@@ -18,6 +18,7 @@ HealthLink makes scheduling appointments simple and efficient. With an intuitive
 - **React**: JavaScript library for building user interfaces.
 - **HTML**: Provides the structure of the web application.
 - **CSS**: Used for styling the interface.
+- **JavaScript** - Used for client-side logic and interactivity.
 - **LocalStorage**: Stores data locally in the browser, such as login state and appointment details.
 
 ## Link to Deployment
